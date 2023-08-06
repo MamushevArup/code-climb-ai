@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import axiosInstance from "@/lib/utils/axiosInstanse";
+import Image from "next/image";
 
 const ProfileDetails = ({ name, direct, status, image }) => {
   const [avatar, setAvatar] = useState(null);
@@ -39,7 +40,7 @@ const ProfileDetails = ({ name, direct, status, image }) => {
       <div className="w-24 h-24 rounded-lg overflow-hidden relative mr-4">
         <div className="group w-full h-full">
           {avatar ? (
-            <img src={avatar} alt="Profile Picture" className="w-full h-full object-cover" />
+            <Image src={avatar} alt="Profile Picture" className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
               <img src={image} alt="" />
