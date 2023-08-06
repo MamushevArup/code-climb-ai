@@ -2,7 +2,7 @@ import React from "react";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/authOptions";
 import Landing from "@/components/home/landing";
-import Page from "./product/pages";
+import Page from "./product/page";
 import axios from "axios";
 import { parse } from "cookie";
 
